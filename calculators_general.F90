@@ -1,3 +1,4 @@
+#include '../../cond_comp.h'
 module SsTC_calculators_general
 
   use SsTC_utility

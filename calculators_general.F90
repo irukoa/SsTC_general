@@ -32,10 +32,7 @@ contains
 
     hamiltonian = SsTC_wannier_hamiltonian(system, k)
     call SsTC_utility_diagonalize(hamiltonian, system%num_bands, eig, rot, error)
-    if (error) then
-      write (unit=stderr, fmt="(a)") "Error in function bands when computing the eigenvalues of the Hamiltonian."
-      return
-    endif
+    if (error) return
     u = eig
   end function SsTC_bands
   !==========DEFAULT BANDS KPATH TASK==========!
